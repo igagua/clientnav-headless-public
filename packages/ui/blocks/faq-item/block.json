@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/faq-item",
+  "title": "Question",
+  "category": "clientnav",
+  "icon": "editor-help",
+  "description": "One question and its answer.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "question": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "answer": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "question": {
+        "kind": "text",
+        "label": "Question"
+      },
+      "answer": {
+        "kind": "text",
+        "label": "Answer",
+        "links": true
+      }
+    }
+  },
+  "parent": [
+    "clientnav/faq"
+  ]
+}

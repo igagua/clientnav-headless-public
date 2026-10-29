@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/roadmap-intro",
+  "title": "Roadmap opening",
+  "category": "clientnav",
+  "icon": "flag",
+  "description": "The dark opening of a roadmap page: title, short text, a button and, if wanted, a few boxes of explanation.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "ctaLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "ctaHref": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "ctaLabel": {
+        "kind": "text",
+        "label": "Button"
+      },
+      "ctaHref": {
+        "kind": "link",
+        "label": "Button address"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/roadmap-fact"
+      ],
+      "template": 0
+    }
+  }
+}

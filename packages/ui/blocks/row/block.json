@@ -1,0 +1,79 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/row",
+  "title": "Picture row",
+  "category": "clientnav",
+  "icon": "align-pull-left",
+  "description": "One row.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "image": {
+      "type": "object"
+    },
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "href": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "image": {
+        "kind": "image",
+        "label": "Picture"
+      },
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "linkLabel": {
+        "kind": "text",
+        "label": "Link"
+      },
+      "href": {
+        "kind": "link",
+        "label": "Address"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/rows"
+  ]
+}

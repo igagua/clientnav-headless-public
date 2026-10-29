@@ -1,0 +1,19 @@
+{
+  "name": "clientnav-headless",
+  "private": true,
+  "description": "Client Navigator Headless: the WordPress plugin and the shared component library (@clientnav/ui) for headless sites.",
+  "workspaces": [
+    "packages/*",
+    "starter"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "scripts": {
+    "build:plugin": "node plugin/build.mjs",
+    "pack:ui": "mkdir -p dist && npm pack --workspace @clientnav/ui --pack-destination dist",
+    "pack:headless": "mkdir -p dist && npm pack --workspace @clientnav/headless --pack-destination dist",
+    "test": "node plugin/build.mjs >/dev/null && node --test tests/*.test.mjs",
+    "pack:plugin": "bin/pack-plugin.sh"
+  }
+}

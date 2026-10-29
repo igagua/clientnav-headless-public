@@ -1,0 +1,86 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/roadmap",
+  "title": "Roadmap",
+  "category": "clientnav",
+  "icon": "networking",
+  "description": "A tree of branches, each with items marked live, building, next or planned. Counts, the progress bars and the filter are worked out from the items.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "rootLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "rootText": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "crownLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "crownText": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "foot": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "title": {
+        "kind": "text",
+        "label": "Title above the tree"
+      },
+      "rootLabel": {
+        "kind": "text",
+        "label": "Start of the tree, bold part"
+      },
+      "rootText": {
+        "kind": "text",
+        "label": "Start of the tree, rest"
+      },
+      "crownLabel": {
+        "kind": "text",
+        "label": "End of the tree, bold part"
+      },
+      "crownText": {
+        "kind": "text",
+        "label": "End of the tree, rest"
+      },
+      "foot": {
+        "kind": "text",
+        "label": "Line under the tree",
+        "links": true
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/roadmap-branch"
+      ],
+      "template": 2
+    }
+  }
+}

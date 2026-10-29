@@ -1,0 +1,91 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/feature",
+  "title": "Feature",
+  "category": "clientnav",
+  "icon": "align-pull-right",
+  "description": "A dark section: statement and button on the left, picture and numbered points on the right.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonHref": {
+      "type": "string",
+      "default": ""
+    },
+    "image": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "buttonLabel": {
+        "kind": "text",
+        "label": "Button"
+      },
+      "buttonHref": {
+        "kind": "link",
+        "label": "Button address"
+      },
+      "image": {
+        "kind": "image",
+        "label": "Picture"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/point"
+      ],
+      "template": 3
+    }
+  }
+}

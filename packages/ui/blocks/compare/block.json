@@ -1,0 +1,131 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/compare",
+  "title": "Comparison table",
+  "category": "clientnav",
+  "icon": "editor-table",
+  "description": "A table comparing up to five plans, in sections of rows; each cell is a check, a dash or a few words.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    },
+    "col1": {
+      "type": "string",
+      "default": ""
+    },
+    "col2": {
+      "type": "string",
+      "default": ""
+    },
+    "col3": {
+      "type": "string",
+      "default": ""
+    },
+    "col4": {
+      "type": "string",
+      "default": ""
+    },
+    "col5": {
+      "type": "string",
+      "default": ""
+    },
+    "highlight": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text under the title"
+      },
+      "anchor": {
+        "kind": "plain",
+        "label": "Anchor (for #links)"
+      },
+      "col1": {
+        "kind": "plain",
+        "label": "Column 1 heading"
+      },
+      "col2": {
+        "kind": "plain",
+        "label": "Column 2 heading"
+      },
+      "col3": {
+        "kind": "plain",
+        "label": "Column 3 heading"
+      },
+      "col4": {
+        "kind": "plain",
+        "label": "Column 4 heading"
+      },
+      "col5": {
+        "kind": "plain",
+        "label": "Column 5 heading"
+      },
+      "highlight": {
+        "kind": "select",
+        "label": "Column to highlight",
+        "options": {
+          "": "None",
+          "1": "Column 1",
+          "2": "Column 2",
+          "3": "Column 3",
+          "4": "Column 4",
+          "5": "Column 5"
+        }
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/compare-section"
+      ],
+      "template": 2
+    }
+  }
+}

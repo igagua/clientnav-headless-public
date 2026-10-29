@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/subnav-link",
+  "title": "Section link",
+  "category": "clientnav",
+  "icon": "admin-links",
+  "description": "One link in the bar.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "href": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "label": {
+        "kind": "text",
+        "label": "Label"
+      },
+      "href": {
+        "kind": "link",
+        "label": "Address (#anchor)"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/subnav"
+  ]
+}

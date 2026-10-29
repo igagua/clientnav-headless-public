@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/options",
+  "title": "Options",
+  "category": "clientnav",
+  "icon": "columns",
+  "description": "Up to three boxes, each with a title, a text and a button, and a wide picture under them if chosen.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "image": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "image": {
+        "kind": "image",
+        "label": "Picture under the boxes"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/option"
+      ],
+      "template": 3
+    }
+  }
+}

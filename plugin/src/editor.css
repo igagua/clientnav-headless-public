@@ -1,0 +1,7 @@
+
+/* ---------- Inside the WordPress editor only ---------- */
+.editor-styles-wrapper [data-type^="clientnav/"] { max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; font-family: var(--cn-font); font-size: 16px; line-height: 1.5; color: var(--cn-ink); }
+.editor-styles-wrapper [data-type^="clientnav/"] :where(h1, h2, h3, p, blockquote) { font-family: inherit; }
+.editor-styles-wrapper .cnu-wrap { padding-left: 32px; padding-right: 32px; }
+.editor-styles-wrapper [data-type^="clientnav/"] [data-rich-text-placeholder]::after { opacity: 0.45; }
+.editor-styles-wrapper .cnu-b-cards-grid > .block-list-appender, .editor-styles-wrapper .cnu-b-points > .block-list-appender, .editor-styles-wrapper .cnu-b-promo-links > .block-list-appender { align-self: center; justify-self: center; padding: 16px; position: static; }

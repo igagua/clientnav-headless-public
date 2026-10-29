@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/promo-link",
+  "title": "Promo link",
+  "category": "clientnav",
+  "icon": "admin-links",
+  "description": "One link in the list.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "href": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "label": {
+        "kind": "text",
+        "label": "Small label"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "href": {
+        "kind": "link",
+        "label": "Address"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/promo"
+  ]
+}

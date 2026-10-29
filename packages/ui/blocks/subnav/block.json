@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/subnav",
+  "title": "Section links",
+  "category": "clientnav",
+  "icon": "menu",
+  "description": "A bar of links to the sections of the page.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "ctaLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "ctaHref": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "ctaLabel": {
+        "kind": "text",
+        "label": "Button"
+      },
+      "ctaHref": {
+        "kind": "link",
+        "label": "Button address"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/subnav-link"
+      ],
+      "template": 3
+    }
+  }
+}

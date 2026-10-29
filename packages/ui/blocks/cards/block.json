@@ -1,0 +1,105 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/cards",
+  "title": "Cards",
+  "category": "clientnav",
+  "icon": "grid-view",
+  "description": "A titled section with a grid of cards.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "variant": {
+      "type": "string",
+      "default": "service"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    },
+    "moreLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "moreHref": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "variant": {
+        "kind": "select",
+        "label": "Card style",
+        "options": {
+          "service": "Joined grid, with text and tags",
+          "tiles": "Separate tiles, with text and tags",
+          "compact": "Picture and one line"
+        }
+      },
+      "anchor": {
+        "kind": "plain",
+        "label": "Anchor (for links like #services)"
+      },
+      "moreLabel": {
+        "kind": "text",
+        "label": "Link under the grid"
+      },
+      "moreHref": {
+        "kind": "link",
+        "label": "Link address"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/card"
+      ],
+      "template": 3
+    }
+  }
+}

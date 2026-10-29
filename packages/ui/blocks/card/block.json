@@ -1,0 +1,100 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/card",
+  "title": "Card",
+  "category": "clientnav",
+  "icon": "index-card",
+  "description": "One card in a grid.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "image": {
+      "type": "object"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "tags": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "href": {
+      "type": "string",
+      "default": ""
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "icon": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "icon": {
+        "kind": "select",
+        "label": "Icon beside the number",
+        "options": {
+          "": "None",
+          "headset": "Headset",
+          "shield-check": "Shield",
+          "cloud": "Cloud",
+          "phone": "Phone",
+          "compass": "Compass",
+          "sparkles": "Sparkles",
+          "network": "Network",
+          "monitor": "Screen",
+          "globe": "Globe",
+          "database": "Database"
+        }
+      },
+      "image": {
+        "kind": "image",
+        "label": "Picture"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "tags": {
+        "kind": "text",
+        "label": "Tags line"
+      },
+      "href": {
+        "kind": "link",
+        "label": "Address"
+      },
+      "linkLabel": {
+        "kind": "text",
+        "label": "Link label"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/cards"
+  ]
+}

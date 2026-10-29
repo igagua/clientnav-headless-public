@@ -1,0 +1,112 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/page-hero",
+  "title": "Page opening",
+  "category": "clientnav",
+  "icon": "heading",
+  "description": "The opening of an inner page: title, short text, two actions and, if chosen, a picture. The path back to the home page is added by the site.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonHref": {
+      "type": "string",
+      "default": ""
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "linkHref": {
+      "type": "string",
+      "default": ""
+    },
+    "image": {
+      "type": "object"
+    },
+    "imageLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text",
+        "links": true
+      },
+      "buttonLabel": {
+        "kind": "text",
+        "label": "Button"
+      },
+      "buttonHref": {
+        "kind": "link",
+        "label": "Button address"
+      },
+      "linkLabel": {
+        "kind": "text",
+        "label": "Second link"
+      },
+      "linkHref": {
+        "kind": "link",
+        "label": "Second link address"
+      },
+      "image": {
+        "kind": "image",
+        "label": "Picture"
+      },
+      "imageLabel": {
+        "kind": "text",
+        "label": "Label on the picture"
+      }
+    }
+  }
+}

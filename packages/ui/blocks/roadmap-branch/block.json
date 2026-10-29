@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/roadmap-branch",
+  "title": "Branch",
+  "category": "clientnav",
+  "icon": "editor-ul",
+  "description": "One branch of the roadmap: a subject and its items.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "default": "globe"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "sub": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "badge": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "icon": {
+        "kind": "select",
+        "label": "Icon",
+        "options": {
+          "shield": "Shield",
+          "net": "Network",
+          "cloud": "Cloud",
+          "life": "Lifebuoy",
+          "call": "Phone call",
+          "chart": "Chart",
+          "globe": "Globe",
+          "desk": "Screen",
+          "hub": "Hub",
+          "spark": "Spark",
+          "people": "People",
+          "layout": "Layout",
+          "key": "Key",
+          "board": "Board",
+          "server": "Server",
+          "plug": "Plug",
+          "book": "Book",
+          "phone": "Phone"
+        }
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "sub": {
+        "kind": "text",
+        "label": "Line under the title"
+      },
+      "badge": {
+        "kind": "text",
+        "label": "Badge (for example: Our focus now)"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/roadmap-item"
+      ],
+      "template": 3
+    }
+  },
+  "parent": [
+    "clientnav/roadmap"
+  ]
+}

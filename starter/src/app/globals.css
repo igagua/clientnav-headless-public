@@ -1,0 +1,71 @@
+:root { --ink: #1d1d1f; --muted: #6b6b70; --line: #e4e4e7; --accent: #2346d8; --bg: #fff; }
+@media (prefers-color-scheme: dark) { :root { --ink: #ececef; --muted: #a1a1aa; --line: #2e2e33; --accent: #8aa2ff; --bg: #111113; } }
+* { box-sizing: border-box; }
+body { margin: 0; font: 17px/1.6 system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+header.site { border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; padding-block: 14px; }
+header.site .name { font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+.menu, .menu ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.menu ul { display: none; }
+.menu a { color: var(--ink); text-decoration: none; }
+main { padding-block: 24px 48px; }
+.article { max-width: 760px; }
+.meta { color: var(--muted); font-size: 0.9rem; }
+.cards { list-style: none; padding: 0; display: grid; gap: 28px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.cards h3 { margin: 8px 0 4px; font-size: 1.05rem; line-height: 1.35; color: var(--ink); }
+.cards a { text-decoration: none; }
+.pager { display: flex; justify-content: space-between; margin-top: 32px; }
+footer.site { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; padding-block: 24px; }
+footer.site .menu a { color: var(--muted); }
+
+/* Designed parts (Elementor): the page builder's rules come scoped under .cnh-el. Elementor's own base rules for its
+   atomic elements (a flexbox is flex, a grid is grid, a heading has no margin) live in its stylesheet, which stays on
+   the CMS, so the few that matter are kept here with Elementor's defaults. */
+.cnh-el .e-div-block-base { min-width: 30px; padding: 10px; display: block; }
+.cnh-el .e-flexbox-base { padding: 10px; display: flex; flex-direction: row; }
+.cnh-el .e-grid-base { column-gap: 20px; row-gap: 20px; padding: 10px; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); }
+.cnh-el .e-heading-base, .cnh-el .e-paragraph-base { margin: 0; }
+.cnh-el .e-image-base { display: block; }
+.cnh-el .e-svg-base { width: 65px; height: 65px; display: inline-block; }
+.cnh-el .e-svg-base svg { width: 100%; height: 100%; display: block; fill: currentColor; }
+.cnh-el .e-button-base { display: inline-block; text-align: center; padding: 12px 24px; border-radius: 2px; border-width: 0; text-decoration: none; cursor: pointer; }
+.cnh-el .e-divider-base { width: 100%; height: 1px; border: 0; background-color: currentColor; margin: 0; }
+.cnh-el details > summary { list-style: none; cursor: pointer; }
+.cnh-el details > summary::-webkit-details-marker { display: none; }
+.cnh-el img { max-width: 100%; height: auto; }
+.cnh-el .ico svg { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; }
+.cnh-el .plain-list { list-style: none; margin: 0; padding: 0; }
+.cnh-el .plain-list-row { display: flex; flex-wrap: wrap; gap: 0.75em; }
+.cnh-el .e-youtube-base iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; }
+@media (max-width: 767px) { .hide-mobile { display: none; } }
+@media (min-width: 768px) and (max-width: 1024px) { .hide-tablet { display: none; } }
+@media (min-width: 1025px) { .hide-desktop { display: none; } }
+
+/* Forms (FormBox): the few rules a form needs; the page builder's rules shape the rest. */
+.ff { display: grid; gap: 0.75rem; }
+.ff-field { display: grid; gap: 0.25rem; }
+.ff input, .ff textarea, .ff select { font: inherit; padding: 0.6em 0.75em; border: 1px solid currentColor; border-radius: 4px; background: transparent; color: inherit; }
+.ff-options { display: flex; flex-wrap: wrap; gap: 0.75em; }
+.ff-trap { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip-path: inset(50%) !important; white-space: nowrap; }
+.ff-error, .ff-notice { margin: 0; font-size: 0.9em; }
+.ff-send { font: inherit; padding: 0.7em 1.4em; border: 0; border-radius: 4px; cursor: pointer; }
+
+/* Elementor's "Canvas" page template: the page alone, without the site's header and footer. */
+body:has(.cnh-canvas) > header.site, body:has(.cnh-canvas) > footer.site { display: none; }
+
+/* Popups and lightboxes (components/actions.tsx): a box in the middle, the page dimmed behind it. */
+dialog.cnh-popup { border: 0; padding: 0; max-width: min(720px, calc(100vw - 32px)); width: 100%; border-radius: 12px; background: var(--e-global-color-pr-bg, #fff); color: inherit; }
+dialog.cnh-popup::backdrop { background: rgba(0, 0, 0, 0.6); }
+.cnh-popup-close { position: absolute; top: 8px; right: 12px; z-index: 2; border: 0; background: none; font-size: 28px; line-height: 1; cursor: pointer; color: inherit; }
+dialog.cnh-lightbox { max-width: min(1000px, calc(100vw - 32px)); background: #000; }
+.cnh-lightbox-video { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
+.cnh-lightbox-image { display: block; max-width: 100%; height: auto; }
+
+/* Page make-ups (GET /layout): one section per group; a single card spans the width. Sites restyle by group key. */
+.cnh-layout { display: grid; gap: 40px; }
+.cnh-one .cards { grid-template-columns: 1fr; }
+.cnh-one .cards h3 { font-size: 1.6rem; }
+.cnh-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

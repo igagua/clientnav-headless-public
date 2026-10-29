@@ -1,0 +1,117 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/overview",
+  "title": "Overview",
+  "category": "clientnav",
+  "icon": "align-pull-left",
+  "description": "A statement with a picture beside a short checklist.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "image": {
+      "type": "object"
+    },
+    "caption": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "listTitle": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonHref": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "image": {
+        "kind": "image",
+        "label": "Picture"
+      },
+      "caption": {
+        "kind": "text",
+        "label": "Line on the picture"
+      },
+      "listTitle": {
+        "kind": "text",
+        "label": "Checklist title"
+      },
+      "buttonLabel": {
+        "kind": "text",
+        "label": "Button under the checklist"
+      },
+      "buttonHref": {
+        "kind": "link",
+        "label": "Button address"
+      },
+      "anchor": {
+        "kind": "plain",
+        "label": "Anchor (for links like #overview)"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/check"
+      ],
+      "template": 3
+    }
+  }
+}

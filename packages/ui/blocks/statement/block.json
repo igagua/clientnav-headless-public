@@ -1,0 +1,87 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/statement",
+  "title": "Statement",
+  "category": "clientnav",
+  "icon": "editor-alignleft",
+  "description": "A title and a text, centred or side by side, with up to two captioned pictures under it.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "variant": {
+      "type": "string",
+      "default": "center"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "variant": {
+        "kind": "select",
+        "label": "Layout",
+        "options": {
+          "center": "Centred",
+          "split": "Title left, text right"
+        }
+      },
+      "anchor": {
+        "kind": "plain",
+        "label": "Anchor (for links like #overview)"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/picture"
+      ],
+      "template": 2
+    }
+  }
+}

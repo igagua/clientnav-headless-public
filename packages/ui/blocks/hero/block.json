@@ -1,0 +1,156 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/hero",
+  "title": "Hero",
+  "category": "clientnav",
+  "icon": "cover-image",
+  "description": "The opening of a page: large title, short text, two actions and a picture.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonHref": {
+      "type": "string",
+      "default": ""
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "linkHref": {
+      "type": "string",
+      "default": ""
+    },
+    "badgeTitle": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "badgeText": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "image": {
+      "type": "object"
+    },
+    "mediaEyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "mediaTitle": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "mediaAccent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "mediaNote": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "buttonLabel": {
+        "kind": "text",
+        "label": "Button"
+      },
+      "buttonHref": {
+        "kind": "link",
+        "label": "Button address"
+      },
+      "linkLabel": {
+        "kind": "text",
+        "label": "Second link"
+      },
+      "linkHref": {
+        "kind": "link",
+        "label": "Second link address"
+      },
+      "badgeTitle": {
+        "kind": "text",
+        "label": "Badge, first line"
+      },
+      "badgeText": {
+        "kind": "text",
+        "label": "Badge, second line"
+      },
+      "image": {
+        "kind": "image",
+        "label": "Picture"
+      },
+      "mediaEyebrow": {
+        "kind": "text",
+        "label": "Label on the picture"
+      },
+      "mediaTitle": {
+        "kind": "text",
+        "label": "Caption"
+      },
+      "mediaAccent": {
+        "kind": "text",
+        "label": "Caption, second line"
+      },
+      "mediaNote": {
+        "kind": "text",
+        "label": "Line under the caption"
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/faq",
+  "title": "Questions",
+  "category": "clientnav",
+  "icon": "editor-help",
+  "description": "Questions that open to show their answers.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "asideText": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "asideLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "asideHref": {
+      "type": "string",
+      "default": ""
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "asideText": {
+        "kind": "text",
+        "label": "Line under the title"
+      },
+      "asideLabel": {
+        "kind": "text",
+        "label": "Link under the title"
+      },
+      "asideHref": {
+        "kind": "link",
+        "label": "Link address"
+      },
+      "anchor": {
+        "kind": "plain",
+        "label": "Anchor (for links like #overview)"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/faq-item"
+      ],
+      "template": 3
+    }
+  }
+}

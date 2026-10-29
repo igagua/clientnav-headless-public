@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/banner",
+  "title": "Picture banner",
+  "category": "clientnav",
+  "icon": "cover-image",
+  "description": "A wide picture with a few words on it.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "image": {
+      "type": "object"
+    },
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "image": {
+        "kind": "image",
+        "label": "Picture"
+      },
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Words"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Words, second line"
+      }
+    }
+  }
+}

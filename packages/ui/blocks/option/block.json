@@ -1,0 +1,110 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/option",
+  "title": "Option",
+  "category": "clientnav",
+  "icon": "button",
+  "description": "One box.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonHref": {
+      "type": "string",
+      "default": ""
+    },
+    "secondLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "secondHref": {
+      "type": "string",
+      "default": ""
+    },
+    "note": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "icon": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "icon": {
+        "kind": "select",
+        "label": "Icon above the title",
+        "options": {
+          "": "None",
+          "headset": "Headset",
+          "shield-check": "Shield",
+          "cloud": "Cloud",
+          "phone": "Phone",
+          "compass": "Compass",
+          "sparkles": "Sparkles",
+          "network": "Network",
+          "monitor": "Screen",
+          "globe": "Globe",
+          "database": "Database"
+        }
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "buttonLabel": {
+        "kind": "text",
+        "label": "Button"
+      },
+      "buttonHref": {
+        "kind": "link",
+        "label": "Button address"
+      },
+      "secondLabel": {
+        "kind": "text",
+        "label": "Second link"
+      },
+      "secondHref": {
+        "kind": "link",
+        "label": "Second link address"
+      },
+      "note": {
+        "kind": "text",
+        "label": "Small line"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/options"
+  ]
+}

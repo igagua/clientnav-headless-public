@@ -1,0 +1,85 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/posts",
+  "title": "Latest articles",
+  "category": "clientnav",
+  "icon": "admin-post",
+  "description": "A titled section with the newest articles.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "linkHref": {
+      "type": "string",
+      "default": ""
+    },
+    "count": {
+      "type": "number",
+      "default": 3
+    },
+    "category": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "linkLabel": {
+        "kind": "text",
+        "label": "Link"
+      },
+      "linkHref": {
+        "kind": "link",
+        "label": "Link address"
+      },
+      "count": {
+        "kind": "number",
+        "label": "How many"
+      },
+      "category": {
+        "kind": "plain",
+        "label": "Only this category (slug)"
+      }
+    }
+  }
+}

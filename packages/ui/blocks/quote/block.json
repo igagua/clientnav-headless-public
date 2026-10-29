@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/quote",
+  "title": "Quote",
+  "category": "clientnav",
+  "icon": "format-quote",
+  "description": "A customer's words with name and role.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "quote": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "name": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "role": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "image": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "quote": {
+        "kind": "text",
+        "label": "Quote"
+      },
+      "name": {
+        "kind": "text",
+        "label": "Name"
+      },
+      "role": {
+        "kind": "text",
+        "label": "Role"
+      },
+      "image": {
+        "kind": "image",
+        "label": "Portrait"
+      }
+    }
+  }
+}

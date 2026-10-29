@@ -1,0 +1,87 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/points",
+  "title": "Numbered points",
+  "category": "clientnav",
+  "icon": "editor-ol",
+  "description": "A titled section with numbered points, as a light grid or a dark row of steps.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "variant": {
+      "type": "string",
+      "default": "grid"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "variant": {
+        "kind": "select",
+        "label": "Style",
+        "options": {
+          "grid": "Light grid",
+          "dark": "Dark row of steps"
+        }
+      },
+      "anchor": {
+        "kind": "plain",
+        "label": "Anchor (for links like #overview)"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/point"
+      ],
+      "template": 3
+    }
+  }
+}

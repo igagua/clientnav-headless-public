@@ -1,0 +1,102 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/promo",
+  "title": "Promo",
+  "category": "clientnav",
+  "icon": "megaphone",
+  "description": "A statement with two buttons beside a short list of links.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonHref": {
+      "type": "string",
+      "default": ""
+    },
+    "secondLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "secondHref": {
+      "type": "string",
+      "default": ""
+    },
+    "note": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "buttonLabel": {
+        "kind": "text",
+        "label": "Button"
+      },
+      "buttonHref": {
+        "kind": "link",
+        "label": "Button address"
+      },
+      "secondLabel": {
+        "kind": "text",
+        "label": "Second button"
+      },
+      "secondHref": {
+        "kind": "link",
+        "label": "Second button address"
+      },
+      "note": {
+        "kind": "text",
+        "label": "Small line under the buttons",
+        "links": true
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/promo-link"
+      ],
+      "template": 3
+    }
+  }
+}

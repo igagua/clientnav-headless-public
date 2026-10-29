@@ -1,0 +1,62 @@
+{
+  "name": "@clientnav/headless",
+  "version": "0.1.15",
+  "private": true,
+  "description": "Client Navigator Headless for a front end: the content door client, preview and refresh routes, pairing, SEO for the page head, and the Anti-Spam and PR Register kits.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./src/index.mjs"
+    },
+    "./door": {
+      "types": "./index.d.ts",
+      "default": "./src/door.mjs"
+    },
+    "./token": {
+      "types": "./index.d.ts",
+      "default": "./src/token.mjs"
+    },
+    "./routes": {
+      "types": "./index.d.ts",
+      "default": "./src/routes.mjs"
+    },
+    "./seo": {
+      "types": "./index.d.ts",
+      "default": "./src/seo.mjs"
+    },
+    "./next": {
+      "types": "./index.d.ts",
+      "default": "./src/next.mjs"
+    },
+    "./antispam": {
+      "types": "./src/antispam.d.ts",
+      "default": "./vendor/antispam-server.mjs"
+    },
+    "./antispam-client": "./vendor/antispam-client.js",
+    "./pr-register": {
+      "types": "./src/pr-register.d.ts",
+      "default": "./vendor/pr-register.mjs"
+    },
+    "./matomo": {
+      "types": "./index.d.ts",
+      "default": "./src/matomo.mjs"
+    }
+  },
+  "bin": {
+    "clientnav-headless-pair": "bin/pair.mjs",
+    "clientnav-headless-parity": "bin/parity.mjs"
+  },
+  "files": [
+    "src",
+    "vendor",
+    "bin/pair.mjs",
+    "bin/parity.mjs",
+    "index.d.ts",
+    "README.md"
+  ]
+}

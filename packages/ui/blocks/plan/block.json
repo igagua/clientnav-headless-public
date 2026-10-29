@@ -1,0 +1,117 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/plan",
+  "title": "Plan",
+  "category": "clientnav",
+  "icon": "tag",
+  "description": "One plan: name, price, button and what it includes.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "tagline": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "price": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "period": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "included": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "buttonHref": {
+      "type": "string",
+      "default": ""
+    },
+    "recommended": {
+      "type": "string",
+      "default": ""
+    },
+    "mark": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "title": {
+        "kind": "text",
+        "label": "Plan name"
+      },
+      "tagline": {
+        "kind": "text",
+        "label": "Line under the name"
+      },
+      "price": {
+        "kind": "text",
+        "label": "Price"
+      },
+      "period": {
+        "kind": "text",
+        "label": "Period (/ month)"
+      },
+      "included": {
+        "kind": "text",
+        "label": "What is included"
+      },
+      "buttonLabel": {
+        "kind": "text",
+        "label": "Button"
+      },
+      "buttonHref": {
+        "kind": "link",
+        "label": "Button address"
+      },
+      "recommended": {
+        "kind": "select",
+        "label": "Recommended",
+        "options": {
+          "": "No",
+          "yes": "Yes: framed, with the mark"
+        }
+      },
+      "mark": {
+        "kind": "text",
+        "label": "Mark (recommended only)"
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/check"
+      ],
+      "template": 3
+    }
+  },
+  "parent": [
+    "clientnav/plans"
+  ]
+}

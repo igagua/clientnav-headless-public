@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/roadmap-item",
+  "title": "Roadmap item",
+  "category": "clientnav",
+  "icon": "marker",
+  "description": "One thing on the roadmap and how far it is.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "status": {
+      "type": "string",
+      "default": "plan"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "note": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "status": {
+        "kind": "select",
+        "label": "How far it is",
+        "options": {
+          "live": "Live",
+          "build": "Building",
+          "next": "Next",
+          "plan": "Planned"
+        }
+      },
+      "title": {
+        "kind": "text",
+        "label": "What"
+      },
+      "note": {
+        "kind": "text",
+        "label": "A few more words"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/roadmap-branch"
+  ]
+}

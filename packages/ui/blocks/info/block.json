@@ -1,0 +1,141 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/info",
+  "title": "Contact details",
+  "category": "clientnav",
+  "icon": "id",
+  "description": "A statement beside a card of ways to get in touch. As the first block of a page it is the page's opening.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "accent": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "linkLabel": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "linkHref": {
+      "type": "string",
+      "default": ""
+    },
+    "cardTitle": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "anchor": {
+      "type": "string",
+      "default": ""
+    },
+    "form": {
+      "type": "string",
+      "default": ""
+    },
+    "cardText": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "asideTitle": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "asideText": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "eyebrow": {
+        "kind": "text",
+        "label": "Small line above"
+      },
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "accent": {
+        "kind": "text",
+        "label": "Title, tinted part"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      },
+      "linkLabel": {
+        "kind": "text",
+        "label": "Link"
+      },
+      "linkHref": {
+        "kind": "link",
+        "label": "Link address"
+      },
+      "cardTitle": {
+        "kind": "text",
+        "label": "Card title"
+      },
+      "anchor": {
+        "kind": "plain",
+        "label": "Anchor (for links like #overview)"
+      },
+      "form": {
+        "kind": "select",
+        "label": "In the card",
+        "options": {
+          "": "The ways to get in touch",
+          "inquiry": "The inquiry form (the ways move beside it)"
+        }
+      },
+      "cardText": {
+        "kind": "text",
+        "label": "Line under the card title"
+      },
+      "asideTitle": {
+        "kind": "text",
+        "label": "Small heading under the ways to get in touch"
+      },
+      "asideText": {
+        "kind": "text",
+        "label": "Text under that heading",
+        "links": true
+      }
+    },
+    "inner": {
+      "allowed": [
+        "clientnav/way"
+      ],
+      "template": 3
+    }
+  }
+}

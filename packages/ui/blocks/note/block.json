@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/note",
+  "title": "Note",
+  "category": "clientnav",
+  "icon": "info",
+  "description": "One line of text with a link, between sections.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "text": {
+        "kind": "text",
+        "label": "Text",
+        "links": true
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+/* @clientnav/ui: the page itself. Front end only; the WordPress editor keeps its own. Load before styles.css. */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-family: var(--cn-font); color: var(--cn-ink); background: var(--cn-bg); -webkit-font-smoothing: antialiased; scroll-behavior: smooth; scroll-padding-top: 120px; }
+html.cnu-locked { overflow: hidden; }
+body { margin: 0; font-size: 16px; line-height: 1.5; }
+a { color: inherit; }
+img { max-width: 100%; height: auto; }
+svg { width: 1em; height: 1em; flex: none; }
+:focus-visible { outline: 2px solid var(--cn-blue); outline-offset: 3px; border-radius: 3px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } html { scroll-behavior: auto; } }

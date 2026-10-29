@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/check",
+  "title": "Checklist line",
+  "category": "clientnav",
+  "icon": "yes",
+  "description": "One line of the checklist.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/overview",
+    "clientnav/plan"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "clientnav-headless-starter",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "A front end for a Client Navigator Headless CMS, built only on @clientnav/headless: the starting point for a new headless site.",
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "build": "next build",
+    "start": "next start -p 3100"
+  },
+  "dependencies": {
+    "@clientnav/headless": "*",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "typescript": "^5"
+  }
+}

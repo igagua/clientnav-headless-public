@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/way",
+  "title": "Way to get in touch",
+  "category": "clientnav",
+  "icon": "phone",
+  "description": "One line of the card.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "value": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "href": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "label": {
+        "kind": "text",
+        "label": "Small label"
+      },
+      "value": {
+        "kind": "text",
+        "label": "What is shown"
+      },
+      "href": {
+        "kind": "link",
+        "label": "Address (tel:, mailto:, a map link)"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/info"
+  ]
+}

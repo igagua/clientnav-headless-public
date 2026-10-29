@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/strip",
+  "title": "Strip",
+  "category": "clientnav",
+  "icon": "ellipsis",
+  "description": "A band of up to four short statements.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "one": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "two": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "three": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "four": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "one": {
+        "kind": "text",
+        "label": "First"
+      },
+      "two": {
+        "kind": "text",
+        "label": "Second"
+      },
+      "three": {
+        "kind": "text",
+        "label": "Third"
+      },
+      "four": {
+        "kind": "text",
+        "label": "Fourth"
+      }
+    }
+  }
+}

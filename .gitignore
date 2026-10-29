@@ -1,0 +1,6 @@
+node_modules/
+dist/
+# Made by plugin/build.mjs from plugin/src and packages/ui
+plugin/clientnav-headless/build/
+plugin/clientnav-headless/blocks/
+*.log

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/roadmap-fact",
+  "title": "Explanation box",
+  "category": "clientnav",
+  "icon": "info-outline",
+  "description": "One box under a roadmap opening.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "text": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "title": {
+        "kind": "text",
+        "label": "Title"
+      },
+      "text": {
+        "kind": "text",
+        "label": "Text"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/roadmap-intro"
+  ]
+}

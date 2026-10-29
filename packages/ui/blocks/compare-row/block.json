@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/compare-row",
+  "title": "Table row",
+  "category": "clientnav",
+  "icon": "table-row-after",
+  "description": "One row: what is compared, then a cell per column (yes, no or a few words).",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "c1": {
+      "type": "string",
+      "default": ""
+    },
+    "c2": {
+      "type": "string",
+      "default": ""
+    },
+    "c3": {
+      "type": "string",
+      "default": ""
+    },
+    "c4": {
+      "type": "string",
+      "default": ""
+    },
+    "c5": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "label": {
+        "kind": "text",
+        "label": "What is compared"
+      },
+      "c1": {
+        "kind": "plain",
+        "label": "Column 1: yes, no or a few words"
+      },
+      "c2": {
+        "kind": "plain",
+        "label": "Column 2: yes, no or a few words"
+      },
+      "c3": {
+        "kind": "plain",
+        "label": "Column 3: yes, no or a few words"
+      },
+      "c4": {
+        "kind": "plain",
+        "label": "Column 4: yes, no or a few words"
+      },
+      "c5": {
+        "kind": "plain",
+        "label": "Column 5: yes, no or a few words"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/compare-section"
+  ]
+}

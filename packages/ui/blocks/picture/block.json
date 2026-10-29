@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "clientnav/picture",
+  "title": "Captioned picture",
+  "category": "clientnav",
+  "icon": "format-image",
+  "description": "A picture with a line on it.",
+  "keywords": [],
+  "textdomain": "clientnav-headless",
+  "attributes": {
+    "image": {
+      "type": "object"
+    },
+    "caption": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    }
+  },
+  "supports": {
+    "html": false,
+    "customClassName": false,
+    "reusable": false,
+    "anchor": false
+  },
+  "editorScript": "clientnav-headless-editor",
+  "editorStyle": "clientnav-headless-ui",
+  "clientnav": {
+    "fields": {
+      "image": {
+        "kind": "image",
+        "label": "Picture"
+      },
+      "caption": {
+        "kind": "text",
+        "label": "Line on the picture"
+      }
+    }
+  },
+  "parent": [
+    "clientnav/statement"
+  ]
+}
